@@ -19,7 +19,7 @@ app.use('/', recipes)
 app.get('/', (req, res) => {
     // res.render('welcome')
     // res.send(process.env.MLAB_URL)
-    res.send(/db/seeds.json)
+    res.send(db/seeds.json)
 })
 
 app.post("/", (req, res) => {
