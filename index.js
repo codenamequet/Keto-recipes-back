@@ -7,7 +7,7 @@ const parser = require('body-parser')
 const methodOverride = require('method-override')
 const port = process.env.PORT || 4000
 
-
+app.use(parser.json())
 app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
