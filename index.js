@@ -12,10 +12,12 @@ app.use(parser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/assets', express.static('public'))
 
-app.use('/recipes', recipes)
+// app.use('/recipes', recipes)
+
+app.use('/', recipes)
 
 app.get('/', (req, res) => {
-    res.render('./welcome')
+    res.render('welcome')
 })
 
 app.post("/", (req, res) => {
