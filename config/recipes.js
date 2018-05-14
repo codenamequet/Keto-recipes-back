@@ -3,14 +3,14 @@ const Recipe = require('../db/models/schema.js')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-     Recipe.find({})
-         .then(recipes => {
-             res.render('recipe-index', { recipes: recipes })
-         })
-         .catch(err => {
-             console.log(err)
-            console.log('not working')
-         })
+    Recipe.find({})
+    .then(recipes => {
+        res.render('recipe-index', { recipes: recipes })
+    })
+    .catch(err => {
+        console.log(err)
+        console.log('not working')
+    })
 })
 
 router.get('/recipes', (req, res) => {
