@@ -17,7 +17,8 @@ app.use('/assets', express.static('public'))
 app.use('/', recipes)
 
 app.get('/', (req, res) => {
-    res.render('welcome')
+    // res.render('welcome')
+    res.send(process.env.MLAB_URL)
 })
 
 app.post("/", (req, res) => {
