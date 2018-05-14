@@ -5,7 +5,7 @@ const recipes = require('./config/recipes.js')
 const app = express()
 const parser = require('body-parser')
 const methodOverride = require('method-override')
-// const port = process.env.PORT || 4000
+const port = process.env.PORT || 4000
 
 
 app.use(parser.urlencoded({ extended: true }))
